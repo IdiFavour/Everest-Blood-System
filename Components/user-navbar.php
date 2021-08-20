@@ -44,7 +44,7 @@
           <a class="nav-link" href="faq.php">FAQ's</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Terms Of Service</a>
+          <a class="nav-link" href="terms.php">Terms Of Service</a>
         </li>
       </ul>
       <!-- Left links -->

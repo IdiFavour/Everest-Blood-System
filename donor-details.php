@@ -68,7 +68,7 @@
                             <h5>Blood Group: <?php echo $donor['bgroup']?> </h5>
                             <h5>Gender: <?php echo $donor['sex']?> </h5>
                             <h5>Mobile: <?php echo $donor['mobile']?> </h5>
-                            <h5>Weight: <?php echo $donor['weight']?> </h5>
+                            <h5>Weight: <?php echo $donor['weight']?> Kg</h5>
                             <a href="mailto:<?php echo $donor['email'] ?>">
                                 <button class="btn bg-main bg-lg">Send A Mail To <?php echo $donor['firstname'] ?></button>
                             </a>
