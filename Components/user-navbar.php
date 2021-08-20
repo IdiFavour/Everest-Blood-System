@@ -8,15 +8,8 @@
     </a>
 
     <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -40,21 +33,17 @@
       <!-- Left links -->
       <div class="d-flex align-items-center">
         <ul class="navbar-nav">
-            <!-- Avatar -->
-            <li class="nav-item dropdown">
-                <p>Welcome <span>User</span> &nbsp;</p>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="profile.php">
-                    <img
-                        src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper.png"
-                        class="rounded-circle"
-                        height="25"
-                        alt=""
-                        loading="lazy"
-                    />
-                </a>
-            </li>
+          <!-- Avatar -->
+          <li class="nav-item dropdown">
+            <p>Welcome <span>User</span> &nbsp;</p>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="profile.php">
+              <img
+                src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper.png"
+                class="rounded-circle" height="25" alt="" loading="lazy" />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
