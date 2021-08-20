@@ -11,7 +11,7 @@ if(isset($_POST['login'])){
     $errormsg = "<i class='fas fa-exclamation-circle'></i> All fields are required";
   }
   else{
-    $query = "SELECT email, pass FROM donors WHERE email = '$email'";
+    $query = "SELECT email, pass, firstname FROM donors WHERE email = '$email'";
     $result = $connection->query($query);
     $rows = $result->num_rows;
     if($rows == 1){
@@ -20,8 +20,8 @@ if(isset($_POST['login'])){
         $row = $result->fetch_array(MYSQLI_ASSOC);
         $check_pass = password_verify($pass, $row['pass']);
         if($check_pass){
-          $_SESSION['email'] = $email;
-          header("Refresh:0");
+          $_SESSION['name'] = $row['firstname'];
+          header("Location: index.php");
         }
         else{
           $errormsg = "<i class='fas fa-exclamation-circle'></i> Invalid email or password";
@@ -53,12 +53,14 @@ if(isset($_POST['login'])){
                 <div class="row m-0 px-0">
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="col-md-9 bg-white border-3 rounded-2 col-lg-7 col-xl-5 p-5">
-                            <?php
-                            if($errormsg != ""){
-                                echo $errormsg;
-                            }
-                            ?>
-                            <form>
+                            <p class="text-danger text-center">
+                                <?php
+                                if($errormsg != ""){
+                                    echo $errormsg;
+                                }
+                                ?>
+                            </p>
+                            <form method="POST">
                                 <a href="index.php" class="text-dark">
                                     <h3 class="text-center mb-3">BloodBank</h3>
                                 </a>
@@ -72,14 +74,6 @@ if(isset($_POST['login'])){
                                 <div class="form-outline mb-4">
                                     <input type="password" name="pass" id="form1Example2" class="form-control form-control-lg" />
                                     <label class="form-label" for="form1Example2">Password</label>
-                                </div>
-    
-                                <!-- 2 column grid layout for inline styling -->
-                                <div class="row mb-4 text-center">
-                                    <div class="col">
-                                        <!-- Simple link -->
-                                        <a href="#!">Forgot password?</a>
-                                    </div>
                                 </div>
     
                                 <!-- Submit button -->

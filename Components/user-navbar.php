@@ -37,7 +37,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="#">Donor Search</a>
+              <a class="dropdown-item" href="donorsearch.php">Donor Search</a>
             </li>
             <li>
               <a class="dropdown-item" href="#">Mobilink Paging Services</a>
@@ -45,7 +45,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">General Information</a>
+          <a class="nav-link" href="general-info">General Information</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="faq.php">FAQ's</a>
@@ -59,7 +59,7 @@
         <ul class="navbar-nav">
             <!-- Avatar -->
             <li class="nav-item me-3 me-lg-0 dropdown">
-                <p>Welcome <span>User</span> &nbsp;</p>
+                <p>Welcome <span><?php echo $_SESSION['name'] ?></span> &nbsp;</p>
             </li>
         <!-- Icon dropdown -->
         <li class="nav-item me-3 me-lg-0 dropdown">
@@ -78,7 +78,9 @@
                 <a class="dropdown-item" href="#">Profile</a>
             </li>
             <li>
-                <a class="dropdown-item" href="#">Logout</a>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="Logout" class="dropdown-item">
+                </form>
             </li>
             </ul>
         </li>

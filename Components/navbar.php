@@ -37,7 +37,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="#">Donor Search</a>
+              <a class="dropdown-item" href="donorsearch.php">Donor Search</a>
             </li>
             <li>
               <a class="dropdown-item" href="#">Mobilink Paging Services</a>
