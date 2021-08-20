@@ -27,3 +27,13 @@
 .contact .form-contain{
     width: 400px;
 }
+
+.login .contain{
+    background-color: lavender;
+}
+
+.faq .preview{
+    height: 300px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}

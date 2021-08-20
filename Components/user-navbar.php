@@ -38,14 +38,24 @@
         </li>
       </ul>
       <!-- Left links -->
-
       <div class="d-flex align-items-center">
-        <a href="login.php">
-          <button type="button" class="btn btn-link px-3 me-2">Login</button>
-        </a>
-        <a href="register.php">
-          <button type="button" class="btn btn-primary me-3">Register</button>
-        </a>
+        <ul class="navbar-nav">
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+                <p>Welcome <span>User</span> &nbsp;</p>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="profile.php">
+                    <img
+                        src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper.png"
+                        class="rounded-circle"
+                        height="25"
+                        alt=""
+                        loading="lazy"
+                    />
+                </a>
+            </li>
+        </ul>
       </div>
     </div>
     <!-- Collapsible wrapper -->
