@@ -8,15 +8,8 @@
     </a>
 
     <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -24,28 +17,8 @@
     <div class="collapse navbar-collapse" id="navbarButtonsExample">
       <!-- Left links -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Blood Seekers
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li>
-              <a class="dropdown-item" href="#">Life Saving Contant</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Donor Search</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Mobilink Paging Services</a>
-            </li>
-          </ul>
+        <li class="nav-item ">
+          <a class="nav-link" href="donorsearch.php">Blood Seekers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="general-info.php">General Information</a>
