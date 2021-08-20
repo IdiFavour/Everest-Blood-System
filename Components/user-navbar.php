@@ -68,7 +68,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="editprofile.php">Profile</a>
             </li>
             <li>
                 <form action="logout.php" method="post">

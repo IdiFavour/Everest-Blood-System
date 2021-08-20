@@ -40,6 +40,7 @@
                     $errmsg = "Error in connection";
                 } else {
                     header("Refresh:0");
+                    $_SESSION['email'] = $email;
                 }
             }
         }
