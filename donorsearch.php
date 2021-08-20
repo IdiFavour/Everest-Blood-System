@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Donor Search</title>
 </head>
+
 <body>
     <header>
         <?php 
@@ -96,7 +97,7 @@
                     <?php echo $errormsg ?> 
                 </p>
 
-                <?php if (isset($donors)) : ?>
+                <?php if (!empty($donors)) : ?>
 
                     <h4 class="text-center">Donors</h4>
                     <div class="container p-4">
@@ -119,14 +120,47 @@
                         </div>
                     </div>
 
+                <?php else : ?>
+                    <div class="container my-5">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="col-lg-4">
+                            <p class="text-center">Sorry donors are not available in your location <br></p>
+                            <button type="submit" class="btn bg-main btn-block" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Contact Us</button>
+
+                            </div>
+                        </div>
+                    </div>
                 <?php endif ?>
             </section>
         <?php endif ?>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Name:</strong> Evarest Oparah</p><br>
+                    <p><strong>Address:</strong> 3 Sunlight Estate, Church Road</p><br>
+                    <p><strong>Number:</strong> 09013021659</p>
+                    
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-mdb-dismiss="modal">
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
     </main>
-    
     <!-- Footer -->
     <?php include_once "Components/footer.php" ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+  </main>
 
 </body>
 
