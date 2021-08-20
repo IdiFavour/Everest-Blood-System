@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
+.bg-main{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+
 .home .home-preview{
     height: 80vh;
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
 .home .welcome-text{
@@ -32,10 +37,10 @@
     background-color: lavender;
 }
 
-.faq .preview{
+.preview{
     height: 300px;
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
 .register .contain {

@@ -48,7 +48,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">General Information</a>
+          <a class="nav-link" href="general-info.php">General Information</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="faq.php">FAQ's</a>
@@ -61,10 +61,10 @@
 
       <div class="d-flex align-items-center">
         <a href="login.php">
-          <button type="button" class="btn btn-link px-3 me-2">Login</button>
+          <button type="button" class="btn btn-link text-dark px-3 me-2">Login</button>
         </a>
         <a href="register.php">
-          <button type="button" class="btn btn-primary me-3">Register</button>
+          <button type="button" class="btn bg-main text-white me-3">Register</button>
         </a>
       </div>
     </div>

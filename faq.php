@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="http://fonts.cdnfonts.com/css/adobe-clean" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
     <title>FAQ's</title>
 </head>
 <body>
