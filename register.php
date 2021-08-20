@@ -44,13 +44,13 @@
     
                                 <!-- Email input -->
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <input type="email" id="form3Example3" class="form-control form-control-lg" />
                                             <label class="form-label" for="form3Example3">Email address</label>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <input type="text" id="form3Example3" class="form-control form-control-lg" />
                                             <label class="form-label" for="form3Example3">Address</label>
@@ -58,13 +58,13 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col col-lg-12">
+                                    <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <input type="text" id="form3Example3" class="form-control form-control-lg" />
                                             <label class="form-label" for="form3Example3">City</label>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <input type="date" id="form3Example3" class="form-control form-control-lg" />
                                             
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <select class="form-select form-control-lg" aria-label="Default select example">
                                                 <option selected>--Blood Group--</option>
@@ -84,7 +84,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <select class="form-select form-control-lg" aria-label="Default select example">
                                             <option selected>--Sex--</option>
                                             <option value="male">Male</option>
