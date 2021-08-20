@@ -13,8 +13,10 @@
     <title>Home | EvarBlood</title>
 </head>
 <body>
-    <main class="home">
+    <header>
         <?php include_once "Components/navbar.php";  ?>
+    </header>
+    <main class="home">
         <section class="home-preview d-flex flex-column justify-content-center align-items-center">
             <div class="text-white text-center">
                 <div class="row m-0 d-flex justify-content-center align-items-center">
@@ -79,6 +81,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Footer -->
+        <?php include_once "Components/footer.php" ?>
     </main>
 </body>
 </html>
