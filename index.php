@@ -1,3 +1,8 @@
+<?php 
+
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,13 @@
 </head>
 <body>
     <header>
-        <?php include_once "Components/navbar.php";  ?>
+        <?php 
+            if (isset($_SESSION['name'])) {
+                include_once "Components/user-navbar.php";
+            } else {
+                include_once "Components/navbar.php";
+            }
+        ?>
     </header>
     <main class="home">
         <section class="home-preview d-flex flex-column justify-content-center align-items-center">

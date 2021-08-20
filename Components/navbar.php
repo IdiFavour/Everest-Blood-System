@@ -17,8 +17,25 @@
     <div class="collapse navbar-collapse" id="navbarButtonsExample">
       <!-- Left links -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" href="donorsearch.php">Blood Seekers</a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Blood Seekers
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="donorsearch.php">Donor Search</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mobilink Paging Services</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="general-info.php">General Information</a>
@@ -27,7 +44,7 @@
           <a class="nav-link" href="faq.php">FAQ's</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Terms Of Service</a>
+          <a class="nav-link" href="terms.php">Terms Of Service</a>
         </li>
       </ul>
       <!-- Left links -->

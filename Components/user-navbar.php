@@ -17,33 +17,66 @@
     <div class="collapse navbar-collapse" id="navbarButtonsExample">
       <!-- Left links -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blood Seekers</a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Blood Seekers
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="donorsearch.php">Donor Search</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mobilink Paging Services</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">General Information</a>
+          <a class="nav-link" href="general-info">General Information</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="faq.php">FAQ's</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Terms Of Service</a>
+          <a class="nav-link" href="terms.php">Terms Of Service</a>
         </li>
       </ul>
       <!-- Left links -->
       <div class="d-flex align-items-center">
         <ul class="navbar-nav">
-          <!-- Avatar -->
-          <li class="nav-item dropdown">
-            <p>Welcome <span>User</span> &nbsp;</p>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="profile.php">
-              <img
-                src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper.png"
-                class="rounded-circle" height="25" alt="" loading="lazy" />
+            <!-- Avatar -->
+            <li class="nav-item me-3 me-lg-0 dropdown">
+                <p>Welcome <span><?php echo $_SESSION['name'] ?></span> &nbsp;</p>
+            </li>
+        <!-- Icon dropdown -->
+        <li class="nav-item me-3 me-lg-0 dropdown">
+            <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+            >
+            <i class="fas fa-user"></i>
             </a>
-          </li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+                <a class="dropdown-item" href="#">Profile</a>
+            </li>
+            <li>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="Logout" class="dropdown-item">
+                </form>
+            </li>
+            </ul>
+        </li>
         </ul>
       </div>
     </div>
