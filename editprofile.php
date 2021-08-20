@@ -1,3 +1,52 @@
+<?php
+    session_start();
+    require_once 'connection.php';
+    require_once 'functions.php';
+    $selector = ""; 
+    $errmsg = "";
+    if($_SESSION['email'] == ""){
+        header("location: ../login");
+      }
+      else{
+         /********* Code to retrieve user details from database **********/
+        $selector = $_SESSION['email'];
+        $query = "SELECT firstname, lastname, email, city, dob, bgroup, sex, address, mobile, weight, pass FROM donors WHERE email = '$selector' ";
+        $user_result = $connection->query($query);
+        if (!$user_result) {
+            die($connection->error);
+        }
+        $user_record = $user_result->fetch_array(MYSQLI_ASSOC);
+        /* End of data retrieval code */
+
+        if (isset($_POST['update'])) {
+            $fname = check_string($connection, $_POST['fname']);
+            $lname = check_string($connection, $_POST['lname']);
+            $city =  check_string($connection, $_POST['city']);
+            $email = check_string($connection, $_POST['email']);
+            $addr = check_string($connection, $_POST['address']);
+            $dob = check_string($connection, $_POST['dob']);
+            $bgroup = check_string($connection, $_POST['bgroup']);
+            $cnum = check_string($connection, $_POST['cnum']);
+            $weight = check_string($connection, $_POST['weight']);
+            $sex = check_string($connection, $_POST['sex']);
+            if ($fname == "" || $lname == "" || $city == "" || $email == "" || $addr == "" || $dob == "" || $bgroup == "" || $cnum == "" || $weight == "" || $sex == "") {
+                $errmsg = "Some fields are empty";
+            } else {
+                $upd_query = "UPDATE donors SET firstname = ?, lastname = ?, email = ?, address = ?, city = ?, dob = ?, bgroup = ?, sex = ?, mobile = ?, weight = ? WHERE email = ?";
+                $upd_result = $connection->prepare($upd_query);
+                $upd_result->bind_param("sssssssssss", $fname, $lname, $email, $addr, $city, $dob, $bgroup, $sex, $cnum, $weight, $selector);
+                if (!$upd_result->execute()) {
+                    die($connection->connect_error);
+                    $errmsg = "Error in connection";
+                } else {
+                    header("Refresh:0");
+                }
+            }
+        }
+      }
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,38 +76,43 @@
                 <div class="row m-0 px-0">
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="col-md-10 bg-white border-3 rounded-2 col-lg-10 col-xl-8 p-3">
-                            <form>
+                            <?php
+                            if ($errmsg != "") {
+                                echo $errmsg;
+                            }
+                            ?>
+                            <form method="POST" action="editprofile.php">
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
                                 <div class="row mb-4">
                                     <div class="col">
                                         <div class="form-outline">
-                                            <input type="text" id="form3Example1"
-                                                class="form-control form-control-lg" />
+                                            <input type="text" name="fname" id="form3Example1"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['firstname'] ?>"/>
                                             <label class="form-label" for="form3Example1">First name</label>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="form-outline">
-                                            <input type="text" id="form3Example2"
-                                                class="form-control form-control-lg" />
+                                            <input name="lname" type="text" id="form3Example2"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['lastname'] ?>"/>
                                             <label class="form-label" for="form3Example2">Last name</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Email input -->
-                                <div class="row">
+                                <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form3Example3"
-                                                class="form-control form-control-lg" />
+                                            <input name="email" type="email" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['email'] ?>"/>
                                             <label class="form-label" for="form3Example3">Email address</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example3"
-                                                class="form-control form-control-lg" />
+                                            <input name="address" type="text" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['address'] ?>"/>
                                             <label class="form-label" for="form3Example3">Address</label>
                                         </div>
                                     </div>
@@ -66,67 +120,74 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example3"
-                                                class="form-control form-control-lg" />
+                                            <input name="city" type="text" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['city'] ?>"/>
                                             <label class="form-label" for="form3Example3">City</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="date" id="form3Example3"
-                                                class="form-control form-control-lg" />
-
+                                            <input name="dob" type="date" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['dob'] ?>"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <select class="form-select form-control-lg"
+                                            <select name="bgroup" class="form-select form-control-lg"
                                                 aria-label="Default select example">
-                                                <option selected>--Blood Group--</option>
-                                                <option value="male">A</option>
-                                                <option value="female">B</option>
-                                                <option value="o">O</option>
-                                                <option value="ab">AB</option>
+                                                <option value="<?php echo $user_record['bgroup'] ?>" selected><?php echo $user_record['bgroup'] ?></option>
+                                                <?php
+                                                    $bgroups = array("A", "B", "AB", "O");
+                                                    foreach($bgroups as $group){
+                                                        if($group != $user_record['bgroup']){
+                                                            echo "<option value='$group'>$group</option>";
+                                                        }
+                                                    }
+                                                ?>
                                             </select>
 
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <select class="form-select form-control-lg" aria-label="Default select example">
-                                            <option selected>--Sex--</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="prefer not to say">Prefer not to say</option>
+                                        <select name="sex" class="form-select form-control-lg" aria-label="Default select example">
+                                        <option value="<?php echo $user_record['sex'] ?>" selected><?php echo $user_record['sex'] ?></option>
+                                        <?php
+                                        $list = array("male", "female", "Prefer not to say");
+                                        foreach($list as $item){
+                                            if($item != $user_record['sex']){
+                                                echo "<option value='$item'>$item</option>";
+                                            }
+                                        }
+                                        ?>    
                                         </select>
-
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example3"
-                                                class="form-control form-control-lg" />
+                                            <input name="cnum" type="text" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['mobile'] ?>"/>
                                             <label class="form-label" for="form3Example3">Contact Number</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example3"
-                                                class="form-control form-control-lg" />
+                                            <input name="weight" type="text" id="form3Example3"
+                                                class="form-control form-control-lg" value="<?php echo $user_record['weight'] ?>"/>
                                             <label class="form-label" for="form3Example3">Weight (In Kg)</label>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4" class="form-control form-control-lg" />
+                                <!-- <div class="form-outline mb-4">
+                                    <input name="pass" type="password" id="form3Example4" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example4">Password</label>
-                                </div>
+                                </div> -->
 
                                 <!-- Submit button -->
-                                <button type="submit" class="btn bg-main btn-block mb-4">Save Changes</button>
+                                <button type="submit" name="update" class="btn bg-main btn-block mb-4">Save Changes</button>
 
 
                             </form>

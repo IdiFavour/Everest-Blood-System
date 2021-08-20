@@ -26,9 +26,9 @@ if (isset($_POST['submit'])) {
     } else {
         $app_date_str = date('Y-m-d');
         $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $query = "INSERT INTO donors(firstname, lastname, email, city, dob, bgroup, sex, mobile, weight, pass) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO donors(firstname, lastname, email, address, city, dob, bgroup, sex, mobile, weight, pass) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $result = $connection->prepare($query);
-        $result->bind_param("ssssssssss", $fname, $lname, $email, $city, $dob, $bgroup, $sex, $cnum, $weight, $pass);
+        $result->bind_param("sssssssssss", $fname, $lname, $email, $addr, $city, $dob, $bgroup, $sex, $cnum, $weight, $pass);
         if (!$result->execute()) {
             die($connection->connect_error);
             $errormsg = "<p style='color: red;' class='mt-3'><i class='fas fa-exclamation-circle'></i> Error in connection</p>";

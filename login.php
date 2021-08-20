@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
         $check_pass = password_verify($pass, $row['pass']);
         if($check_pass){
           $_SESSION['email'] = $email;
-          header("Refresh:0");
+          header("Location: index.php");
         }
         else{
           $errormsg = "<i class='fas fa-exclamation-circle'></i> Invalid email or password";
