@@ -22,6 +22,7 @@ if(isset($_POST['login'])){
         if($check_pass){
           $_SESSION['name'] = $row['firstname'];
           $_SESSION['email'] = $email;
+          $_SESSION['name'] = $row['firstname'];
           header("Location: index.php");
         }
         else{
@@ -62,7 +63,7 @@ if(isset($_POST['login'])){
                                 }
                                 ?>
                             </p>
-                            <form method="POST">
+                            <form method="POST" action="login.php">
                                 <a href="index.php" class="text-dark">
                                     <h3 class="text-center mb-3">BloodBank</h3>
                                 </a>
