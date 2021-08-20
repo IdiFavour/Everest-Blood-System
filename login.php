@@ -19,7 +19,9 @@
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="col-md-9 bg-white border-3 rounded-2 col-lg-7 col-xl-5 p-5">
                             <form>
-                                <h3 class="text-center mb-3">BloodBank</h3>
+                                <a href="index.php" class="text-dark">
+                                    <h3 class="text-center mb-3">BloodBank</h3>
+                                </a>
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <input type="email" id="form1Example1" class="form-control form-control-lg" />
@@ -41,7 +43,7 @@
                                 </div>
     
                                 <!-- Submit button -->
-                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                <button type="submit" class="btn bg-main  btn-block">Sign in</button>
                             </form>
                         </div>
                     </div>

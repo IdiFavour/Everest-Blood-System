@@ -115,7 +115,7 @@
                                 </div>
     
                                 <!-- Submit button -->
-                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+                                <button type="submit" class="btn bg-main btn-block mb-4">Sign up</button>
     
                                
                             </form>

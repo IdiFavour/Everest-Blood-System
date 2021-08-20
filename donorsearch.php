@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 mt-2">
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        <button type="submit" class="btn bg-main btn-block">Submit</button>
                     </div>
                     </div>
                 </form>
