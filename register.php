@@ -74,8 +74,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example3" class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example3">Blood Group</label>
+                                            <select class="form-select form-control-lg" aria-label="Default select example">
+                                                <option selected>--Blood Group--</option>
+                                                <option value="male">A</option>
+                                                <option value="female">B</option>
+                                                <option value="o">O</option>
+                                                <option value="ab">AB</option>
+                                            </select>
+
                                         </div>
                                     </div>
                                     <div class="col">
@@ -102,11 +108,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
-                               
-                                
-    
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <input type="password" id="form3Example4" class="form-control form-control-lg" />
