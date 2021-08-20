@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="http://fonts.cdnfonts.com/css/adobe-clean" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 </head>
 <body>
     <main class="login">
@@ -18,7 +17,7 @@
             <div class="container">
                 <div class="row m-0 px-0">
                     <div class="d-flex align-items-center justify-content-center">
-                        <div class="col-md-9 bg-white border-3 rounded-2 col-lg-7 col-xl-5 p-5 border">
+                        <div class="col-md-9 bg-white border-3 rounded-2 col-lg-7 col-xl-5 p-5">
                             <form>
                                 <h3 class="text-center mb-3">BloodBank</h3>
                                 <!-- Email input -->
