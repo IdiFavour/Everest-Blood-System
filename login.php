@@ -58,7 +58,7 @@ if(isset($_POST['login'])){
                                 echo $errormsg;
                             }
                             ?>
-                            <form>
+                            <form method="POST" action="login.php">
                                 <a href="index.php" class="text-dark">
                                     <h3 class="text-center mb-3">BloodBank</h3>
                                 </a>
