@@ -52,3 +52,7 @@
     min-height: 100vh;
     background-color: lavender;
 }
+
+.donor-search .cus-card{
+    background: whitesmoke;
+}

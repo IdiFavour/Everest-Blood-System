@@ -37,9 +37,6 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="#">Life Saving Contant</a>
-            </li>
-            <li>
               <a class="dropdown-item" href="#">Donor Search</a>
             </li>
             <li>

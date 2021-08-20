@@ -17,37 +17,56 @@
     <header>
         <?php include_once "Components/navbar.php";  ?>
     </header>
-    <main class="faq">
+    <main class="donor-search">
         <section class="preview d-flex flex-column justify-content-center align-items-center">
             <h2 class="text-white">Donor Search</h2>
-        </section><div class="container-fluid mt-5 mb-5">
-            <div class="container">
-                <form class="form-a">
-                    <div class="row m-0">
-                    <div class="col-md-5 mb-2">
-                        <div class="form-group">
-                            <input type="text" class="form-control p-2 ps-3 rounded-0 shadow-0 form-control-lg form-control-a" placeholder="City">
+        </section>
+        <section>
+            <div class="container-fluid mt-5 mb-5">
+                <div class="container">
+                    <form class="form-a">
+                        <div class="row m-0">
+                        <div class="col-md-5 mb-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control p-2 ps-3 rounded-0 shadow-0 form-control-lg form-control-a" placeholder="City">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <div class="form-group">
-                        <select class="form-control p-2 bg-white ps-3 form-select rounded-0 shadow-0 form-control-a form-control-lg" id="Type">
-                            <option>--Blood Types--</option>
-                            <option>A</option>
-                            <option>B</option>
-                            <option>AB</option>
-                            <option>O</option>
-                        </select>
+                        <div class="col-md-4 mb-2">
+                            <div class="form-group">
+                            <select class="form-control p-2 bg-white ps-3 form-select rounded-0 shadow-0 form-control-a form-control-lg" id="Type">
+                                <option>--Blood Types--</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>AB</option>
+                                <option>O</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mt-2">
-                        <button type="submit" class="btn bg-main btn-block">Submit</button>
-                    </div>
-                    </div>
-                </form>
+                        <div class="col-md-3 mt-2">
+                            <button type="submit" class="btn bg-main btn-block">Submit</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-        
-        </div>
+        </section>
+        <section class="card-contain">
+            <h4 class="text-center">Donors</h4>
+            <div class="container p-4">
+                <div class="row m-0 d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <div class="cus-card p-4">
+                            <div class="d-grid gap-0">
+                                <h6>UserName</h6>
+                                <p>Address</p>
+                                <p>A</p>
+                                <a href="donor-details.php" class="text-end"><button class="btn bg-main">View More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer -->
