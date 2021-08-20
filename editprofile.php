@@ -5,7 +5,7 @@
     $selector = ""; 
     $errmsg = "";
     if($_SESSION['email'] == ""){
-        header("location: ../login");
+        header("location: login.php");
       }
       else{
          /********* Code to retrieve user details from database **********/

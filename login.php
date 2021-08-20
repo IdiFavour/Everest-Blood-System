@@ -20,6 +20,7 @@ if(isset($_POST['login'])){
         $row = $result->fetch_array(MYSQLI_ASSOC);
         $check_pass = password_verify($pass, $row['pass']);
         if($check_pass){
+          $_SESSION['name'] = $row['firstname'];
           $_SESSION['email'] = $email;
           header("Location: index.php");
         }
