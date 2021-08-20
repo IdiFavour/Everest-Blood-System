@@ -104,7 +104,7 @@
                                     <div class="col-md-6">
                                         <div class="form-outline mb-4">
                                             <input type="text" id="form3Example3" class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example3">Weight</label>
+                                            <label class="form-label" for="form3Example3">Weight (In Kg)</label>
                                         </div>
                                     </div>
                                 </div>

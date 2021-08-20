@@ -11,6 +11,10 @@
     color: white;
 }
 
+.bg-main:hover{
+    color: white;
+}
+
 .home .home-preview{
     height: 80vh;
     background-color: #7f5a83;
